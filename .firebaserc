@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "dynamic-subtraction-online": {
+      "hosting": {
+        "dynamic-subtraction-online": [
+          "dynamic-subtraction-online"
+        ]
+      }
+    }
+  }
+}
