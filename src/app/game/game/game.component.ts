@@ -35,6 +35,8 @@ export class GameComponent implements OnInit {
         if (this.win === undefined) {
           if (this.game.initialChips === 0) {
             this.win = false;
+            this.firestore.collection<ActiveGame>('activeGames').doc(params.id).delete();
+            return;
           }
         }
         for (let i = 0; i < this.game.initialChips; ++i) {
