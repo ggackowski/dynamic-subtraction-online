@@ -1,0 +1,13 @@
+<form>
+  <label> Initial number of chips
+    <input type="text" name="chips" [(ngModel)]="game.initialChips">
+  </label>
+  <br>
+  <label> Function
+    <select [(ngModel)]="game.func" name="func">
+        <option value="x">x</option>
+    </select>
+  </label>
+  <br>
+  <button type="button" (click)="createGame()">Create</button>
+</form>

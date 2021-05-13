@@ -1,0 +1,8 @@
+<p>List of games</p>
+<button (click)="createGame()">create game</button>
+<div *ngIf="gameCreationInProgress">
+  <app-create-game></app-create-game>
+</div>
+<ul *ngIf="loaded">
+  <li *ngFor="let game of games" (click)="joinGame(game)">{{game.player1Name}}</li>
+</ul>

@@ -1,0 +1,16 @@
+<div *ngIf="loaded">
+  <div *ngIf="win === undefined">
+    <p>game works!</p>
+    <p *ngIf="!isMyTurn()">Opponent's turn!</p>
+    <ul *ngIf="isMyTurn()">
+      <li *ngFor="let chip of this.chips"
+          [ngStyle]="chip.taken ? {color: 'red'} : {}"
+          (click)="toggleChip(chip)">
+        chip
+      </li>
+      <button (click)="nextTurn()">next turn</button>
+    </ul>
+  </div>
+  <div *ngIf="win === true">YOU WON</div>
+  <div *ngIf="win === false">YOU LOOSE</div>
+</div>

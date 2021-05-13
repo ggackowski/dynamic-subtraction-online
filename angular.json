@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "b24568c6-f900-43e7-8ed7-d593908051a4"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -120,6 +123,10 @@
               "devServerTarget": "dynamic-subtraction-online:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
